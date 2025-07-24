@@ -14,7 +14,18 @@ public class Profissional {
 
     private String nome;
     private String telefone;
+    private String senha;
     private String email;
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @OneToMany(mappedBy = "profissional",  fetch = FetchType.LAZY )

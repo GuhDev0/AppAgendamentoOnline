@@ -7,7 +7,6 @@ import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 @Service
-
 public class ClienteServices {
 
     private final ClienteRepository clienteRepository;

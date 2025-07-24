@@ -12,6 +12,8 @@ public class Agendamento {
     @Id
     @GeneratedValue
     private UUID id;
+    @Column(name = "Tipo_De_Serviço")
+    private String tipoDeServicio;
     @Column(name = "data")
     private LocalDate data;
     @Column(name = "hora")
@@ -28,6 +30,16 @@ public class Agendamento {
     private Profissional profissional ;
 
 
+
+
+    public String getTipoDeServicio() {
+        return tipoDeServicio;
+    }
+
+
+    public void setTipoDeServicio(String tipoDeServicio) {
+        this.tipoDeServicio = tipoDeServicio;
+    }
 
     public UUID getId() {
         return id;
