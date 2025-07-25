@@ -3,6 +3,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -31,12 +32,23 @@ public class Profissional {
     @OneToMany(mappedBy = "profissional",  fetch = FetchType.LAZY )
     private Set<Agendamento> agendamentos =   new HashSet<>();
 
+    @OneToMany(mappedBy = "profissional", fetch = FetchType.LAZY )
+    private Set<HorarioDeFuncionamento> horarioDeFuncionamento = new HashSet<>();
+
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Set<HorarioDeFuncionamento> getHorarioDeFuncionamento() {
+        return horarioDeFuncionamento;
+    }
+
+    public void setHorarioDeFuncionamento(Set<HorarioDeFuncionamento> horarioDeFuncionamento) {
+        this.horarioDeFuncionamento = horarioDeFuncionamento;
     }
 
     public String getNome() {

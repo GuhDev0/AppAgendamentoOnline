@@ -17,6 +17,7 @@ public class ProfissionalServices {
 
     public Profissional saveProfissional(DtoProfissional dtoProfissional) {
 
+
         Profissional profissional = new Profissional();
         profissional.setNome(dtoProfissional.nome());
         profissional.setSenha(dtoProfissional.senha());
